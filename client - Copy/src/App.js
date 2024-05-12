@@ -13,16 +13,6 @@ function App() {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   const isAuth = Boolean(useSelector((state) => state.token));
-  axios.default.withCredentials = true;
-  const handlesubmit = (e) => {
-    e.preventDefault();
-    axios.post('https://mern-i3examg27-rj-vieras-projects.vercel.app/', {email, password})
-    .then(result => console.log(result))
-    .catch(err => console.log(err)) 
-  }
-
-
-
 
   return (
     <div className="app">
