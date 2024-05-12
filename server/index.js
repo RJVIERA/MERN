@@ -25,9 +25,8 @@ dotenv.config();
 const app = express();
 app.use(cors(
   {
-    origin:[" "],
+    origin:["https://mern-client-eb24rkw74-rj-vieras-projects.vercel.app/"],
     methods: ["POST", "GET"],
-    credentials:true
   }
 ));
 
