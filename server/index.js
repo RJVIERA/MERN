@@ -30,6 +30,17 @@ app.use(cors(
     credentials:true
   }
 ));
+
+app.use(express.json ())
+mongoose.connect('mongodb+srv://rjviera10:dazai2323@test.rdtzwin.mongodb.net/?retryWrites=true&w=majority&appName=Test')
+
+app.get("/", (req,res) =>{
+
+  res.json("Hello");
+
+});
+
+
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
