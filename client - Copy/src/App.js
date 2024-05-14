@@ -13,7 +13,14 @@ function App() {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   const isAuth = Boolean(useSelector((state) => state.token));
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('https://mern-backend-5aqe82see-rj-vieras-projects.vercel.app/login')
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
+  
+  
+  }
   return (
     <div className="app">
       <BrowserRouter>
