@@ -25,7 +25,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
   {
-    origin:["https://mern-backend-navy-six.vercel.app/"],
+    origin:["https://mern-client-eb24rkw74-rj-vieras-projects.vercel.app/"],
     methods: ["POST", "GET"],
   }
 ));
